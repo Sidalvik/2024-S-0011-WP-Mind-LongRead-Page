@@ -30,8 +30,9 @@ html {
   outline: none;
 }
 
-
-h2, h3, p {
+h2,
+h3,
+p {
   padding: 0;
   margin: 0;
 }
@@ -49,7 +50,7 @@ body {
   font-size: 16px;
   background-color: var(--black);
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+  font-family: 'Roboto', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serifs;
 }
 
 .global-container {
@@ -273,7 +274,7 @@ img {
 }
 
 .menu-item a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -296,7 +297,6 @@ img {
 .menu-item a:active {
   color: var(--accent-shadow-color);
 }
-
 
 #locale {
   display: -webkit-box;
@@ -904,7 +904,7 @@ h2 {
 }
 
 .mail__bt-text::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -928,8 +928,6 @@ h2 {
 .mail__bt[href]:active {
   color: var(--accent-shadow-color);
 }
-
-
 
 .mail__bt[href]:nth-last-child(2) {
   margin-bottom: 35px;
@@ -1022,7 +1020,8 @@ h2 {
 .button-close-modal {
   padding: 4px;
   line-height: 1;
-  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
 }
 
 .button-close-modal img {
@@ -1319,24 +1318,68 @@ textarea::placeholder {
 }
 
 /* longread page */
+.longread__section {
+  transition: transform 0.5s ease-in-out;
+}
+
 .hero__video-bg {
   z-index: -1;
 }
 
-.longread__page {
-  display: flex;
+.longread__content .page {
   margin-bottom: 45px;
+}
+
+.longread__content_handscroll .page {
+  display: flex;
   flex-direction: column;
+  padding: 88px 56px;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 40px;
+  box-shadow: inset 2px 5px 8px 0 rgba(255, 255, 255, 0.2);
+}
+
+.longread__content_handscroll .page:last-child {
+  margin-bottom: 0;
+}
+
+.longread__content .page > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.longread__content .page > p + ul,
+.longread__content .page > p + ol {
+  margin-top: -2rem;
 }
 
 .longread__logo {
+  margin: 0 auto 3rem;
+}
+
+.longread__logo img {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-height: 194px;
+  object-fit: contain;
 }
 
 .longread__title {
-  /* font-size: 1rem; */
   text-align: center;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.longread__content p,
+.longread__content ol,
+.longread__content ul {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .longread__hero {
@@ -1344,7 +1387,7 @@ textarea::placeholder {
   height: 100vh;
 }
 
-.longread__container_autoscroll {
+.longread__container {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -1362,32 +1405,60 @@ textarea::placeholder {
   padding: 96px 52px 64px;
   border-image-source: url('../images/frame-1.png');
   border-image-slice: 50.21% 50% 45% 50%;
-  border-image-repeat: round;
+  border-image-repeat: stretch round;
   border-image-width: auto;
+  opacity: 0.8;
 }
 
-.longread__wrapper_inner {
+.longread__innerwrapper {
   height: 100%;
   overflow: hidden;
 }
 
 .longread__content_autoscroll {
-  animation: autoscroll 5s 4s ease-in infinite;
+  animation: autoscroll 15s 1s linear infinite;
 }
 
 @keyframes autoscroll {
-    0% {
-      transform: translateY(0%);
+  0% {
+    transform: translateY(0%);
   }
   100% {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
 
-.hero__btn_longread {
-  margin-top: auto;
+.arrow-btn {
+  display: block;
+  font-size: 0;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.arrow-btn:hover {
+  animation-play-state: paused;
+}
+
+.longread__container .arrow-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.longread__section.hidden-screen {
+  display: none;
 }
 
 .longread__section_handscroll {
-  display: none;
+  background-image: url('../images/stars.jpg');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat-y;
 }

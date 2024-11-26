@@ -274,4 +274,12 @@ $(document).ready(function () {
   resizeFullModalBox();
   window.addEventListener('resize', resizeFullModalBox);
   window.addEventListener('orientationchange', resizeFullModalBox);
+
+  // longread slide screens
+  document.querySelectorAll('.slide-screens').forEach((item) => {
+    item.addEventListener('click', (env) => {
+      env.preventDefault();
+      document.querySelectorAll('.longread__section').forEach((el) => {el.classList.toggle('hidden-screen')});
+    });
+  });
 });
