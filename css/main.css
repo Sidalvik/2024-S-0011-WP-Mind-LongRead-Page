@@ -1319,7 +1319,7 @@ textarea::placeholder {
 
 /* longread page */
 .longread__section {
-  transition: transform 0.5s ease-in-out;
+  --slide-time: 1500ms;
 }
 
 .hero__video-bg {
@@ -1410,6 +1410,7 @@ textarea::placeholder {
   padding-top: calc(var(--header-height) + 59px);
   padding-bottom: 64px;
   row-gap: 25px;
+  will-change: transform;
 }
 
 .longread__wrapper {
@@ -1470,10 +1471,38 @@ textarea::placeholder {
   }
 }
 
-.longread__section.hidden-screen {
+/* .longread__section.hidden-screen {
   display: none;
-}
+} */
 
 .longread__section_handscroll {
   background: url('../images/stars.jpg') center / contain repeat-y;
+}
+
+/* Adding basic styles for animation */
+.hidden-screen {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+.slide-up {
+  animation: slide-up var(--slide-time) ease;
+}
+
+.slide-down {
+  animation: slide-up var(--slide-time) ease reverse;
 }
