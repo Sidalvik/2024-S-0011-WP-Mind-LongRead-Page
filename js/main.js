@@ -275,11 +275,58 @@ $(document).ready(function () {
   window.addEventListener('resize', resizeFullModalBox);
   window.addEventListener('orientationchange', resizeFullModalBox);
 
-  // longread slide screens
-  document.querySelectorAll('.slide-screens').forEach((item) => {
-    item.addEventListener('click', (env) => {
-      env.preventDefault();
-      document.querySelectorAll('.longread__section').forEach((el) => {el.classList.toggle('hidden-screen')});
-    });
+  // Vertical slider
+
+  const topSection = document.querySelector('.longread__section_top');
+  const bottomSection = document.querySelector('.longread__section_bottom');
+  const btnDown = document.querySelector('.arrow-btn-down');
+  const btnUp = document.querySelector('.arrow-btn-up');
+  const durationInMs = 1500;
+
+  const scrollToElement = (element, duration) => {
+    const start = window.pageYOffset;
+    const target = element.getBoundingClientRect().top + start;
+    const distance = target - start;
+    const startTime = performance.now();
+
+    const animation = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+
+      window.scrollTo(0, start + distance * easeInOutQuad(progress));
+
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+    requestAnimationFrame(animation);
+  };
+
+  // slide up
+  btnDown.addEventListener('click', () => {
+    bottomSection.classList.remove('hidden-screen');
+    bottomSection.classList.add('slide-up');
+    topSection.classList.add('slide-up');
+    setTimeout(() => {
+      topSection.classList.add('hidden-screen');
+      topSection.classList.remove('slide-up');
+      bottomSection.classList.remove('slide-up');
+    }, durationInMs);
+  });
+
+  // slide down
+  btnUp.addEventListener('click', () => {
+    topSection.classList.add('slide-down');
+    bottomSection.classList.add('slide-down');
+    topSection.classList.remove('hidden-screen');
+    scrollToElement(bottomSection, durationInMs);
+    setTimeout(() => {
+      bottomSection.classList.add('hidden-screen');
+      bottomSection.classList.remove('slide-down');
+      topSection.classList.remove('slide-down');
+    }, durationInMs);
   });
 });
