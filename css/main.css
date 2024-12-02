@@ -1471,12 +1471,11 @@ textarea::placeholder {
   }
 }
 
-/* .longread__section.hidden-screen {
-  display: none;
-} */
-
 .longread__section_handscroll {
-  background: url('../images/stars.jpg') center / contain repeat-y;
+  background: url('../images/block-2-1920@2x.jpg') top 3000px right / 100% auto
+      no-repeat,
+    url('../images/block-2-1920@2x.jpg') top right / 100% auto no-repeat,
+    url('../images/stars.jpg') top left / 100% auto repeat-y;
 }
 
 /* Adding basic styles for animation */
