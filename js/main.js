@@ -133,6 +133,11 @@ $(document).ready(function () {
     $('body,html').animate({ scrollTop: top }, 800);
   });
 
+  $('.scroll-to-top').on('click', function() {
+      $('html, body').animate({ scrollTop: 0 }, 800);
+  });
+
+
   $('.js-send').submit(function () {
     var formID = $(this).attr('id');
 
