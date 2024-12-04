@@ -138,6 +138,10 @@
     border: none;
   }
 
+  .dark-header {
+    background-color: transparent;
+  }
+
   .menu__btn {
     opacity: 0.8;
   }
@@ -553,6 +557,11 @@
     max-height: 660px;
   }
 
+  .longread__section_handscroll {
+    background: url('../images/sun.png') top 24.8% right -120px / 100% auto no-repeat,
+      url('../images/stars.jpg') top left / 100% auto repeat-y;
+  }
+
   .longread__content_handscroll {
     padding-top: 56px;
   }
@@ -820,11 +829,15 @@
     width: 100%;
   }
 
-
   /* longread */
   .longread__wrapper_autoscroll {
     padding: 64px 30px;
     max-height: 414px;
+  }
+
+  .longread__section_handscroll {
+    background: url('../images/sun.png') top 27.3% right -120px / 140% auto no-repeat,
+      url('../images/stars.jpg') top left / 100% auto repeat-y;
   }
 
   .longread__content_handscroll {
@@ -833,15 +846,22 @@
   }
 
   .longread__content_handscroll .page {
+    --dark-bg: rgba(0, 0, 0, 0.6);
+    min-height: 50vh;
     padding: 32px 30px;
+    border-radius: 30px;
   }
 
   .longread__logo img {
-    max-height: 115px;
+    max-height: 128px;
   }
 
   .longread__title {
     font-size: 1.25rem;
+  }
+
+  .longread__content p {
+    font-size: 0.9375rem;
   }
 
   .longread__title_autoscroll {

@@ -9,6 +9,7 @@
   --sky-color: rgb(25, 150, 242);
   --sky-color-2: rgb(103, 139, 163);
   --frame-bg: rgba(32, 32, 32, 0.7);
+  --dark-bg: rgba(0, 0, 0, 0.8);
   --sectional-overlap: 8vh;
   --header-height: 58px;
 }
@@ -236,6 +237,10 @@ img {
   z-index: 10;
   border-bottom: 1px solid #3b3b3b;
   height: var(--header-height);
+}
+
+.dark-header {
+  background-color: var(--dark-bg);
 }
 
 .header__container {
@@ -1333,17 +1338,13 @@ textarea::placeholder {
   z-index: -1;
 }
 
-.longread__content .page:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 .longread__content_handscroll .page {
   display: flex;
   flex-direction: column;
   padding: 56px 88px;
   min-height: 900px;
-  margin-bottom: 2rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 4rem;
+  background-color: var(--dark-bg);
   border-radius: 40px;
   box-shadow: inset 2px 5px 8px 0 rgba(255, 255, 255, 0.2);
 }
@@ -1397,7 +1398,7 @@ textarea::placeholder {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: 194px;
+  max-height: 256px;
   object-fit: contain;
 }
 
@@ -1492,8 +1493,7 @@ textarea::placeholder {
 }
 
 .longread__section_handscroll {
-  background: url('../images/block-2-1920@2x.jpg') top 50% right 150px / 100%
-      auto no-repeat,
+  background: url('../images/sun.png') top 27.6% right -100px / 59.2% auto no-repeat,
     url('../images/stars.jpg') top left / 100% auto repeat-y;
 }
 
