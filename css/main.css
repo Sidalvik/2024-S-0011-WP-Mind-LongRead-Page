@@ -239,10 +239,6 @@ img {
   height: var(--header-height);
 }
 
-.dark-header {
-  background-color: #000000;
-}
-
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1432,7 +1428,7 @@ textarea::placeholder {
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  padding-top: calc(var(--header-height) + 59px);
+  padding-top: calc(var(--header-height) + 100px);
   padding-bottom: 64px;
   row-gap: 25px;
   will-change: transform;

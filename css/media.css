@@ -870,8 +870,9 @@
   }
 
   .arrow-btn {
-    width: 32px;
-    height: 32px;
+    display: block;
+    width: 48px;
+    height: 48px;
   }
 }
 
