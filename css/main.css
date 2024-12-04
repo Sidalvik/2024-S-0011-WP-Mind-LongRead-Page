@@ -9,7 +9,7 @@
   --sky-color: rgb(25, 150, 242);
   --sky-color-2: rgb(103, 139, 163);
   --frame-bg: rgba(32, 32, 32, 0.7);
-  --dark-bg: rgba(0, 0, 0, 0.8);
+  --dark-bg: rgba(0, 0, 0, 0.75);
   --sectional-overlap: 8vh;
   --header-height: 58px;
 }
@@ -240,7 +240,7 @@ img {
 }
 
 .dark-header {
-  background-color: var(--dark-bg);
+  background-color: #000000;
 }
 
 .header__container {
@@ -1349,6 +1349,10 @@ textarea::placeholder {
   box-shadow: inset 2px 5px 8px 0 rgba(255, 255, 255, 0.2);
 }
 
+.longread__content_handscroll .page:last-of-type {
+  margin-bottom: 2rem;
+}
+
 .longread__content_handscroll .page:last-child {
   margin-bottom: 0;
 }
@@ -1391,7 +1395,7 @@ textarea::placeholder {
 }
 
 .longread__logo_handscroll {
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
 }
 
 .longread__logo img {
@@ -1405,7 +1409,7 @@ textarea::placeholder {
 .longread__title {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   font-size: 1.625rem;
   font-weight: 700;
