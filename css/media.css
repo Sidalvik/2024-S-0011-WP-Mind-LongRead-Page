@@ -557,9 +557,8 @@
     max-height: 660px;
   }
 
-  .longread__section_handscroll {
-    background: url('../images/sun.png') top 24.8% right -120px / 100% auto no-repeat,
-      url('../images/stars.jpg') top left / 100% auto repeat-y;
+  .longread__section_handscroll .page:nth-of-type(1)::before {
+    transform: translate(27%, 69%);
   }
 
   .longread__content_handscroll {
@@ -833,11 +832,6 @@
   .longread__wrapper_autoscroll {
     padding: 64px 30px;
     max-height: 414px;
-  }
-
-  .longread__section_handscroll {
-    background: url('../images/sun.png') top 27.3% right -120px / 140% auto no-repeat,
-      url('../images/stars.jpg') top left / 100% auto repeat-y;
   }
 
   .longread__content_handscroll {
