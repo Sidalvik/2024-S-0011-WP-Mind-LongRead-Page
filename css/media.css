@@ -558,6 +558,8 @@
   }
 
   .longread__section_handscroll .page:nth-of-type(1)::before {
+    width: 100%;
+    padding-bottom: 73.53%;
     transform: translate(22%, 63%);
   }
 
@@ -577,6 +579,16 @@
   .longread__content ol,
   .longread__content ul {
     text-align: start;
+  }
+}
+
+@media screen and (max-height:500px) and (orientation: landscape) {
+  .longread__container {
+    padding-top: 54px;
+  }
+
+  .longread__content {
+    padding-top: 0;
   }
 }
 

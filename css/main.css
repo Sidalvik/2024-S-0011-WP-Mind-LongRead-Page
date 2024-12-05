@@ -1512,9 +1512,9 @@ textarea::placeholder {
   right: 0;
   bottom: 0;
   display: block;
-  width: 100%;
+  width: 85%;
   height: 0;
-  padding-bottom: 73.53%;
+  padding-bottom: 62.5%;
   background: url('../images/sun.png') bottom right / contain no-repeat;
   transform: translate(43%, 50%);
   z-index: -1;
