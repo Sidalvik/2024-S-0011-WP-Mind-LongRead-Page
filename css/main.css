@@ -239,6 +239,10 @@ img {
   height: var(--header-height);
 }
 
+.accent-menu {
+  color: var(--accent-color);
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1405,7 +1409,7 @@ textarea::placeholder {
 .longread__title {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
   text-align: center;
   font-size: 1.625rem;
   font-weight: 700;
@@ -1512,8 +1516,9 @@ textarea::placeholder {
   height: 0;
   padding-bottom: 73.53%;
   background: url('../images/sun.png') bottom right / contain no-repeat;
-  transform: translate(36%, 74%);
+  transform: translate(43%, 50%);
   z-index: -1;
+  pointer-events: none;
 }
 
 /* Adding basic styles for animation */
