@@ -558,7 +558,7 @@
   }
 
   .longread__section_handscroll .page:nth-of-type(1)::before {
-    transform: translate(27%, 69%);
+    transform: translate(22%, 63%);
   }
 
   .longread__content_handscroll {
@@ -567,10 +567,6 @@
 
   .longread__content_handscroll .page {
     padding: 56px 88px;
-  }
-
-  .longread__logo img {
-    max-height: 195px;
   }
 
   .longread__title_handscroll {

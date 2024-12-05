@@ -1350,7 +1350,7 @@ textarea::placeholder {
 }
 
 .longread__content_handscroll .page:last-of-type {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .longread__content_handscroll .page:last-child {
