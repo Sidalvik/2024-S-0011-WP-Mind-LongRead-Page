@@ -842,8 +842,16 @@
     border-radius: 30px;
   }
 
+  .longread__content_handscroll .page:last-of-type {
+    margin-bottom: 2rem;
+  }
+
   .longread__logo img {
-    max-height: 128px;
+    max-height: 150px;
+  }
+
+  .longread__logo_handscroll {
+    margin-bottom: 2rem;
   }
 
   .longread__title {
@@ -851,7 +859,8 @@
     font-size: calc(1.42857142857143vw + 12.8571428571429px);
   }
 
-  .longread__content p {
+  .longread__content p,
+  .longread__content li {
     font-size: 0.9375rem;
   }
 
@@ -859,10 +868,24 @@
     font-size: 1.125rem;
   }
 
+  .longread__title_handscroll {
+    margin-bottom: 2rem;
+  }
+
+  .longread__section_handscroll .page:nth-of-type(1)::before {
+    transform: translate(18%, 76%);
+  }
+
   .arrow-btn {
     display: block;
     width: 48px;
     height: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  .longread__container {
+    padding-top: 54px;
   }
 }
 
