@@ -133,6 +133,12 @@ $(document).ready(function () {
     $('body,html').animate({ scrollTop: top }, 800);
   });
 
+  $('.scroll-to-top').on('click', function (event) {
+    event.preventDefault()
+    $('html, body').animate({ scrollTop: 0 }, 800);
+  });
+
+
   $('.js-send').submit(function () {
     var formID = $(this).attr('id');
 
@@ -227,7 +233,7 @@ $(document).ready(function () {
       if (
         Number.parseFloat(styles.height) ===
         Number.parseFloat(styles.paddingTop) +
-          Number.parseFloat(styles.paddingBottom)
+        Number.parseFloat(styles.paddingBottom)
       ) {
         item.children[0].style.height = styles.height;
         item.children[0].style.width = styles.width;
@@ -276,7 +282,7 @@ $(document).ready(function () {
   window.addEventListener('orientationchange', resizeFullModalBox);
 
   // Vertical slider
-
+const screenSlider = () => {
   const topSection = document.querySelector('.longread__section_top');
   const bottomSection = document.querySelector('.longread__section_bottom');
   const btnDown = document.querySelector('.arrow-btn-down');
@@ -329,4 +335,5 @@ $(document).ready(function () {
       topSection.classList.remove('slide-down');
     }, durationInMs);
   });
+}
 });
